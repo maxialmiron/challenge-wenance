@@ -1,1 +1,1 @@
-# wenance-challenge
+# challenge-wenance
