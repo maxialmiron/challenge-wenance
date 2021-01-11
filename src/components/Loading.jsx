@@ -11,11 +11,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Loading = ({ text }) => {
+const Loading = () => {
     const classes = useStyles();
     return (
         <section className={classes.root}>
-        <img src={loadingImg}  alt="loading" />
+          <img src={loadingImg}  alt="loading" />
         </section>
       );};
  

@@ -1,6 +1,6 @@
 import React from 'react';
  
-const ErrorView = ({ data }) => {
+const ErrorView = () => {
     return (
         <>
             <div>Ocurrio un error...</div>

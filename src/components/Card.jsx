@@ -30,13 +30,13 @@ const useStyles = makeStyles(theme => ({
 
   const Card = ({ data }) => {
 
-    const classes = useStyles();
-
     const dispatch = useDispatch();
 
     const remove = (e) => {
       dispatch(removePeople(e))
     };
+
+    const classes = useStyles();
 
     return (
       <CardMUI className={classes.root}>
