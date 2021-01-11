@@ -7,7 +7,7 @@ const SearchBar = ({isActive}) => {
    
   const useStyles = makeStyles(theme => ({
     root: {
-      width:"310px",  borderRadius: 10, padding:"10px" ,margin:"15px"
+      width:"310px", borderRadius: 10, padding:"10px" ,margin:"20px"
     }
   }));
 

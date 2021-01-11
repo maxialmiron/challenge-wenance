@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import CardsPage from './pages/CardsPage'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Cards 
+        STAR WARS 
       </header>
 
       <div>
