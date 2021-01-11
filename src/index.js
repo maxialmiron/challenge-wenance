@@ -11,9 +11,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 
 render(
   <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+      <App/>
   </Provider>,
   document.getElementById("root")
 );

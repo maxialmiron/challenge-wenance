@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchPeople } from '../actions/peopleAction'
-import { ErrorView, SearchBar, Loading, CardsList} from '../components'
-import { Divider, makeStyles } from '@material-ui/core';
+import { ErrorView, SearchBar, Loading, CardsList, Notification, NoResults} from '../components'
+import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    "background": "#282c34",
+    "display": "flex",
+    "flexDirection" : "column",
+    "alignItems" : "center",
+    "fontSize": "calc(10px + 2vmin)",
   }
 }));
 
@@ -22,28 +27,29 @@ const CardsPage = () => {
     dispatch(fetchPeople())
   }, [dispatch])
   
-  const { peopleList, hasErrors, loading, filteredPeopleList } = useSelector(
+  const { peopleList, hasErrors, loading, filteredPeopleList, removedSuccess } = useSelector(
     (state) => state.people,
   );
 
-  const renderCards = () => {
+  const renderElements = () => {
     if (loading) return <Loading/>
     if (hasErrors) return <ErrorView/>
     if (peopleList) {
       return ( 
         <div className={classes.root}>
+          <Notification close={removedSuccess}/>
           <SearchBar isActive={(e) => setActiveSearchBar(e)}/>
-          <CardsList list={isActiveSearchBar ? filteredPeopleList: peopleList} />
-          
+          <CardsList list={isActiveSearchBar ? filteredPeopleList: peopleList}/>
+          {(isActiveSearchBar && filteredPeopleList.length === 0) &&  <NoResults/>} 
         </div>
       )
     }
   }
 
   return (
-    <section>
-      {renderCards()}
-    </section>
+    <div>
+      {renderElements()}
+    </div>
   )
 }
 

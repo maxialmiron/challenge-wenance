@@ -1,30 +1,23 @@
 import React from 'react';
-import CardMUI from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import CardActions from '@material-ui/core/CardActions';
-import Button from '@material-ui/core/Button';
-import { Divider, makeStyles } from '@material-ui/core';
-import CardHeader from '@material-ui/core/CardHeader';
+import  {CardActions, Typography, CardContent, Divider, makeStyles, Button } from '@material-ui/core';
 import { removePeople } from '../actions/peopleAction'
 import { useDispatch } from "react-redux";
+import CardMUI from '@material-ui/core/Card';
 
 const useStyles = makeStyles(theme => ({
     root: {
       borderRadius: 12,
-      minWidth: 156,
+      minWidth: 146,
       textAlign: 'center',
       margin: 12,
-      backgroundColor: '#282c34',
-      color: 'white',
-      width: 430
+      width: 450
     },
     header: {
       textAlign: 'center',
-      spacing: 10,
+      spacing: 8,
     },
     list: {
-      padding: '5px',
+      padding: '4px',
     },
     button: {
       margin: theme.spacing(1),
@@ -47,7 +40,6 @@ const useStyles = makeStyles(theme => ({
 
     return (
       <CardMUI className={classes.root}>
-
         <CardContent>
           <Typography variant="h4" align="center">
           {data.name}
@@ -64,7 +56,6 @@ const useStyles = makeStyles(theme => ({
           </Button>
         </CardActions>
       </CardMUI>
-
     );
 }
 

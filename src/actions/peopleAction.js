@@ -8,7 +8,7 @@ export function fetchPeople() {
     const URL_API_PEOPLE = `https://swapi.dev/api/people/` 
     
     try {
-      const response = await fetch(URL_API_PEOPLE)
+      const response = await fetch("https://run.mocky.io/v3/d6b584e9-90b2-493a-b4d8-beac0be8e3f0")
       const data = await response.json()
       dispatch(actionCreators.getPeopleSuccess(data))
     } catch (error) {
