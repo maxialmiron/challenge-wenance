@@ -1,5 +1,5 @@
 import React from 'react';
-import loadingImg from '../loading.gif' 
+import loadingImg from '../images/loading.gif' 
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
