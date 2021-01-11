@@ -12,10 +12,6 @@ const useStyles = makeStyles(theme => ({
       margin: 12,
       width: 450
     },
-    header: {
-      textAlign: 'center',
-      spacing: 8,
-    },
     list: {
       padding: '4px',
     },

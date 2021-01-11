@@ -28,7 +28,7 @@ export default function peopleReducer(state = initialState, action) {
       })
     case actionTypes.REMOVE_PEOPLE_SUCCESS:
       return Object.assign({}, state, {
-        peopleList: state.peopleList.filter(element => element !== action.payload), loading: false, hasErrors: false, removedSuccess: true 
+        peopleList: state.peopleList.filter(element => element !== action.payload), filteredPeopleList: state.filteredPeopleList.filter(element => element !== action.payload), loading: false, hasErrors: false, removedSuccess: true 
       })
     case actionTypes.REMOVE_PEOPLE_FAILURE:
       return Object.assign({}, state, {

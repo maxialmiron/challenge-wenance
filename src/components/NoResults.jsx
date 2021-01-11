@@ -3,16 +3,13 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        color:"white"
+        color:"#FFFFFF"
     }
   }));
-const NoResults = ({ data }) => {
+const NoResults = () => {
     const classes = useStyles();
-
     return (
-        <>
-            <div className={classes.root}>No se encontraron resultados</div>
-        </>
+        <section className={classes.root}>No se encontraron resultados</section>
       );};
  
 export default NoResults;
